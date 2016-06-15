@@ -41,12 +41,14 @@ body {
 }
 
 /* Angular material styles overwrites */
+
 .offline {
 	color: $red !important;
 }
 .online {
 	color: $green !important;
 }
+
 body {
 
 	/* hover button */
@@ -56,6 +58,7 @@ body {
 	.md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover , 
 	.md-button.md-primary.md-fab:not([disabled]):hover {      
 		background-color: $darkblue;
+
 	}
 	.md-button.md-default-theme.md-primary.md-raised:not([disabled]).md-focused, 
 	.md-button.md-primary.md-raised:not([disabled]).md-focused, 
@@ -69,7 +72,14 @@ body {
 	._md a:not(.md-button).md-primary:hover {    
 		color: $darkblue;
 	}
+
 }
+
+md-card.md-default-theme .md-card-image , 
+md-card .md-card-image {    
+	border-radius: 2px 2px 0 0;
+}
+
 
 /* Tables */
 
@@ -90,5 +100,7 @@ table.md-table {
 	tbody tr:nth-child(even) td {
 		background-color: #ebf4f9;
 	}
+
 }
+
 
