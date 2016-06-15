@@ -42,6 +42,8 @@
   <!-- endinjector -->
   <!-- endbuild -->
 
+  <link rel="stylesheet" href="app/custom.css">
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style type="text/css">
@@ -57,7 +59,7 @@
   <md-progress-linear class="login-spin-hide" ng-class="{ 'login-spin': ct_login.active  }" md-mode="query"></md-progress-linear>
 
   <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2" ng-hide="ct_login.active">
-    <md-toolbar ng-hide="vm.menu.hideToolbar">
+    <md-toolbar class="page-header" ng-hide="vm.menu.hideToolbar">
       <div class="md-toolbar-tools">
         <md-button id="main" ng-if="!vm.menu.hideBurger" class="md-icon-button" ng-click="toggleOpen()" aria-label="'Settings' | translate">
           <md-icon>menu</md-icon>

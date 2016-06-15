@@ -1,0 +1,94 @@
+/* Custom CSS */
+
+/* Varables */
+$font-stack: 	'Open Sans', Arial, sans-serif;
+$primary-color: #434A4F;
+$link-color: 	#7f8588;
+$darkblue: 		#004a7c;
+$lightblue: 	#0072b4;
+$darkgrey: 		#434A4F;
+$meduimgrey: 	#6C7479;
+$lightgrey: 	#CCCDCF;
+$green:			#97BF0D;
+$orange:		#F29400;
+$red:			#D8462E;
+
+body {
+   	font-family: $font-stack;
+ 	button, select, html, textarea, input {
+    	font-family: $font-stack;
+	}
+
+	a {
+		color: $link-color;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.page-header, .page-footer {
+	/*box-shadow: 0 8px 8px -8px #000 inset;*/
+	background: $lightblue;
+    background: linear-gradient(to right, $lightblue, $darkblue);
+}
+/* Typography */
+
+.md-headline {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 26px;
+}
+
+/* Angular material styles overwrites */
+.offline {
+	color: $red !important;
+}
+.online {
+	color: $green !important;
+}
+body {
+
+	/* hover button */
+
+	.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover, 
+	.md-button.md-primary.md-raised:not([disabled]):hover, 
+	.md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover , 
+	.md-button.md-primary.md-fab:not([disabled]):hover {      
+		background-color: $darkblue;
+	}
+	.md-button.md-default-theme.md-primary.md-raised:not([disabled]).md-focused, 
+	.md-button.md-primary.md-raised:not([disabled]).md-focused, 
+	.md-button.md-default-theme.md-primary.md-fab:not([disabled]).md-focused , 
+	.md-button.md-primary.md-fab:not([disabled]).md-focused {      
+		background-color: $darkblue;
+	}
+
+
+	._md a.md-default-theme:not(.md-button).md-primary:hover , 
+	._md a:not(.md-button).md-primary:hover {    
+		color: $darkblue;
+	}
+}
+
+/* Tables */
+
+table.md-table {
+	thead.md-head {
+		& > tr.md-row {
+			height: 45px;
+		}
+		th {
+			background-color: $lightblue;
+			color: #fff;
+			font-size: 12px;
+			a {
+				color: #fff;
+			}
+		}	
+	}
+	tbody tr:nth-child(even) td {
+		background-color: #ebf4f9;
+	}
+}
+

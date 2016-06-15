@@ -84,14 +84,35 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$mdThemingP
   var items = ['pink', 'orange', 'blue-grey', 'blue', 'red', 'green', 'yellow', 'teal', 'brown'];
   var item = 'blue';
 
+  var delosBlue = $mdThemingProvider.extendPalette('blue', {
+    '700': '#0072b4',
+  });
+  var delosRed = $mdThemingProvider.extendPalette('red', {
+    '700': '#d8462e',
+  });
+  var delosGreen = $mdThemingProvider.extendPalette('green', {
+    '700': '#97bf0d',
+  });
+  // Register the new color palette maps 
+  $mdThemingProvider.definePalette('delosBlue', delosBlue);
+  $mdThemingProvider.definePalette('delosRed', delosRed);
+  $mdThemingProvider.definePalette('delosGreen', delosGreen);
+
   $mdThemingProvider.theme('default')
-    .primaryPalette(item, {
-      'hue-1': '100',
-    }).
-    accentPalette('blue', {
-      'default': '500',
-      'hue-1': '50'
+
+    .primaryPalette('delosBlue', {
+      'default': '700', 
+      // 'hue-1': '100', // use shade 100 for the <code>md-hue-1</code> class
+      // 'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
+      // 'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
+    })
+    .accentPalette('delosGreen', {
+      'default': '700' // use shade 700 for default, and keep all other shades the same
+    })
+    .warnPalette('delosRed', {
+      'default': '700' // use shade 700 for default, and keep all other shades the same
     });
+
 
   function loginRequired ($location, $q, AccessToken, $rootScope) {
     var deferred = $q.defer();
