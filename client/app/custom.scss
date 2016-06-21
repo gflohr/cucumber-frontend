@@ -30,7 +30,7 @@ body {
 .page-header, .page-footer {
 	/*box-shadow: 0 8px 8px -8px #000 inset;*/
 	background: $lightblue;
-    background: linear-gradient(to right, $lightblue, $darkblue);
+    background: linear-gradient(to right, $darkblue, $lightblue);
 }
 /* Typography */
 
@@ -92,6 +92,13 @@ table.md-table {
 			background-color: $lightblue;
 			color: #fff;
 			font-size: 12px;
+			.md-column.md-active {
+				color: #fff;
+				opacity: 0.8;
+				&:hover {
+				opacity: 1;	
+				}
+			}
 			a {
 				color: #fff;
 			}
@@ -103,4 +110,19 @@ table.md-table {
 
 }
 
+table.md-table th.md-column.md-active {
+	span, md-icon {
+		color: #fff;
+    	opacity: 0.8 !important;
+	}
+	&:hover {
+		span, md-icon {
+			color: #fff;
+    		opacity: 1 !important;
+		}
+    }  
+}
+.section_name {
+	text-transform: uppercase;
+}
 
