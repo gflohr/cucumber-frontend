@@ -74,7 +74,7 @@ app.directive('clientsChart', ['$timeout', '$rootScope', 'gettextCatalog', funct
           height: '84%',
           width: '94%'
         },
-        colors: ['#009688', '#009688', '#FF5722', '#03A9F4', '#FF5722', '#607D8B'],
+        colors: ['#97bf0d', '#97bf0d', '#d8462e', '#03A9F4', '#d8462e', '#607D8B'],
         series: {
           0: {
             targetAxisIndex: 0, visibleInLegend: false, pointSize: 0, lineWidth: 0
@@ -307,7 +307,7 @@ app.directive('clientChart', ['Report', '$routeParams', '$q', 'ClientDetails', f
           width: '90%'
         },
         interpolateNulls: true,
-        colors: ['#009688', '#009688', '#FF5722', '#03A9F4', '#FF5722', '#607D8B']
+        colors: ['#97bf0d', '#97bf0d', '#d8462e', '#03A9F4', '#d8462e', '#607D8B']
       };
 
       this.setInterval = function() {
@@ -637,7 +637,7 @@ app.directive('usageChart', ['$timeout', 'Report', '$routeParams', function($tim
       opts.pieHole = 0.6;
       opts.legend = { position: 'right' };
       opts.height = '255';
-      opts.colors = ['#009688', '#FF5722'];
+      opts.colors = ['#97bf0d', '#d8462e'];
 
 
       formatter.format(data,1);
@@ -1036,7 +1036,7 @@ app.directive('snrChart', ['$timeout', 'Report', '$routeParams', function($timeo
       } else {
         opts.height = 250;
       }
-      opts.colors = ['#009688', '#FF5722', '#03A9F4', '#009688', '#607D8B'];
+      opts.colors = ['#97bf0d', '#d8462e', '#03A9F4', '#97bf0d', '#607D8B'];
       c = new window.google.visualization.LineChart(document.getElementById('snr-chart'));
       c.draw(data, opts);
       scope.noData = undefined;
@@ -1250,7 +1250,7 @@ app.directive('locationChart', ['Report', '$routeParams', '$timeout', '$location
     scope.type = $routeParams.type || 'clients';
     var c, timer, data, json;
     var opts = controller.options;
-    opts.colors = ['#FF5722', '#FF5722', '#009688', '#03A9F4', '#FF5722', '#607D8B'];
+    opts.colors = ['#d8462e', '#d8462e', '#97bf0d', '#03A9F4', '#d8462e', '#607D8B'];
 
     var resource = 'location';
     scope.loading = true;

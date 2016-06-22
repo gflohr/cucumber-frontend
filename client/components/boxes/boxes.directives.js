@@ -868,9 +868,9 @@ app.directive('boxStatus', ['Box', '$routeParams', '$location', '$timeout', '$ro
       Box.status({id: $routeParams.id}).$promise.then(function(results) {
         scope.status = results.status ? 5 : 0;
         if ( results.status === 1) {
-          scope.color = '#43ac6a';
+          scope.color = '#97bf0d';
         } else {
-          scope.color = '#d92525';
+          scope.color = '#d8462e';
         }
       });
 

@@ -91,15 +91,19 @@ app.filter('statusColour', function() {
     } else {
       switch(state) {
         case 'online':
-          return '#16AC5B';
+          return '#97bf0d';
+          break;
         case 'rebooting':
           return 'Device rebooting';
         case 'offline':
-          return '#F44336';
+          return '#d8462e';
+          break;
         case 'splash_only':
           return '#009688';
         default:
-          return '#607D8B';
+          return '#6c7479';
+          // default
+
       }}
   };
 });
