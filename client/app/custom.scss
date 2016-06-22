@@ -126,3 +126,16 @@ table.md-table th.md-column.md-active {
 	text-transform: uppercase;
 }
 
+.brand {
+	display: flex; 
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%; 
+	height: 64px;
+	h2 a {
+		color: $darkgrey;
+	}
+	.more_right {
+		color: $darkgrey;
+		fill: $darkgrey;
+	}
+}
+
