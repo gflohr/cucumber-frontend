@@ -156,6 +156,11 @@ table.md-table th.md-column.md-active {
 		display: flex;
 		height: 56px;
 		z-index: 1;
+		h2 img {
+			margin-top: -20px; 
+			margin-right: -20px; 
+			margin-left: -10px;
+		}
 	}
 }
 
