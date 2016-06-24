@@ -9,8 +9,12 @@
       {{ vm.menu.sectionName }}
     </h2>
     <span flex></span>
-    <div class="brand" >
-    <h2><a href="/#/">devolo</a></h2>
+    <div class="brand">
+    <div class="logo_wrapper" md-whiteframe="3">
+    <h2><a href="/#/">
+      <img src="/app/assets/devolo_logo_grau.svg"  width="220" height="100px" 
+      style="margin-top: -20px;margin-right: -7px;" />
+    </a></h2>
       <md-menu>
         <md-button aria-label="Open Apps Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
           <md-icon class="more_right">more_horiz</md-icon>
@@ -27,40 +31,40 @@
           <md-menu-item>
             <md-button ng-href="/#/me" >
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">face</md-icon>
-              Account
+              <span translate>Account</span>
             </md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
             <md-button target="_blank" ng-href="http://docs.cucumberwifi.io" >
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">account_balance</md-icon>
-              Documentation
+              <span translate>Documentation</span>
             </md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button target="_blank" ng-href="https://discuss.cucumberwifi.io/" >
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">forum</md-icon>
-              Discussions
+              <span translate>Discussions</span>
             </md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
             <md-button href="/#/downloads" >
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">get_app</md-icon>
-              Downloads
+              <span translate>Downloads</span>
             </md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button href="/#/apps" >
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">android</md-icon>
-              Developer
+              <span translate>Developer</span>
             </md-button>
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
             <md-button ng-click="logout()">
               <md-icon md-menu-align-target style="margin: auto 3px auto 0;">exit_to_app</md-icon>
-              Logout
+              <span translate>Logout</span>
             </md-button>
           </md-menu-item>
           <!-- -->
@@ -77,7 +81,7 @@
         <md-icon>chat</md-icon>
       </md-button>
  -->
-   
+      </div><!-- end logo_wrapper-->
     </div><!--end brand-->
 <!--     <md-button id="main" hide-gt-sm class="md-icon-button" ng-click="toggle('right')" aria-label="Settings">
       <md-icon>apps</md-icon>

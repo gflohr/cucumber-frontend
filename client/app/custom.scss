@@ -128,14 +128,34 @@ table.md-table th.md-column.md-active {
 
 .brand {
 	display: flex; 
-	background: rgb(255, 255, 255) none repeat scroll 0% 0%; 
-	height: 64px;
+	/*background: rgb(255, 255, 255) none repeat scroll 0% 0%; */
+	height: 58px;
+	margin-right: -16px;
+	
+	align-self: flex-start;
+	/* box-shadow: 10px 10px 10px #000;*/ 
 	h2 a {
 		color: $darkgrey;
 	}
 	.more_right {
 		color: $darkgrey;
 		fill: $darkgrey;
+	}
+	&:before {
+		background: transparent url("/app/assets/devolo_header.svg") no-repeat scroll -20px 0;
+	    z-index: 3;
+	    content: " ";
+	    display: inline-block;
+	    height: 59px;
+	    vertical-align: top;
+	    width: 28px;
+	}
+	.logo_wrapper {
+		display: inline-block;
+		background-color: #fff;
+		display: flex;
+		height: 56px;
+		z-index: 1;
 	}
 }
 
