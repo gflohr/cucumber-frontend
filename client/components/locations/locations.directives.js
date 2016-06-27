@@ -1634,14 +1634,14 @@ app.directive('appStatus', ['statusPage', 'gettextCatalog', function(statusPage,
         scope.status = data;
         if (scope.status.incidents.length === 0) {
           if (scope.status.status.indicator === 'none') {
-            scope.color = 'rgb(76,175,80)';
+            scope.color = '#97bf0d'; // green
             scope.incidents = gettextCatalog.getString('All systems operational.');
           } else {
-            scope.color = 'rgb(255,152,0)';
+            scope.color = '#f29400'; //orange
             scope.incidents = gettextCatalog.getString('Partially degraded service.');
           }
         } else {
-          scope.color = 'rgb(244,67,54)';
+          scope.color = 'd8462e'; // red
         }
         scope.url   = scope.status.incidents.length === 0 ? 'http://status.ctapp.io' : scope.status.incidents[0].shortlink;
       });
@@ -1649,7 +1649,7 @@ app.directive('appStatus', ['statusPage', 'gettextCatalog', function(statusPage,
 
     init();
 
-  };
+  };  
 
   return {
     scope: {
