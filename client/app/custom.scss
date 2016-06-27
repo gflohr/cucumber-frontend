@@ -28,7 +28,6 @@ body {
 	}
 }
 .page-header, .page-footer {
-	/*box-shadow: 0 8px 8px -8px #000 inset;*/
 	background: $lightblue;
     background: linear-gradient(to right, $darkblue, $lightblue);
 }
@@ -166,9 +165,33 @@ table.md-table th.md-column.md-active {
 	    margin-right: -20px;
 	    margin-top: -20px;
 	}
-
+	.devolo_logo_sm {
+		display: none;
+	}
 }
+// Tablet
 @media screen and (max-width: 959px) {
+	.brand {
+		height: 48px;
+		&:before {
+			background: transparent url("/app/assets/devolo_header_sm.svg") no-repeat scroll -23px 1px;
+		    height: 46px;
+		    width: 25px;
+		}
+		.logo_wrapper {
+		    height: 41px;	   
+		}
+		.devolo_logo {
+			width: 160px;
+			margin-top: -26px;
+		}
+		.devolo_logo_sm {
+			display: none;
+		}
+	}
+}
+// Smartphone
+@media screen and (max-width: 599px) {
 	.brand {
 		height: 48px;
 		&:before {
@@ -185,6 +208,9 @@ table.md-table th.md-column.md-active {
 		}
 		.devolo_logo_lg {
 			display: none;
+		}
+		.devolo_logo_sm {
+			display: inline-block;
 		}
 	}
 }
