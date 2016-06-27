@@ -130,7 +130,7 @@ table.md-table th.md-column.md-active {
 	width: 100%;
 }
 .brand {
-	display: flex; 
+	display: flex;
 	height: 58px;
 	margin-right: -16px;
 	margin-top: -3px;
@@ -143,19 +143,25 @@ table.md-table th.md-column.md-active {
 		fill: $darkgrey;
 	}
 	&:before {
-		background: transparent url("/app/assets/devolo_header.svg") no-repeat scroll -20px 0;
+		background: transparent url("/app/assets/devolo_header.svg") no-repeat scroll 0 1px;
 	    z-index: 3;
 	    content: " ";
 	    display: inline-block;
-	    height: 59px;
+	    height: 58px;
 	    vertical-align: top;
 	    width: 28px;
+	    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: 'FlipH';
 	}
 	.logo_wrapper {
 		display: inline-block;
 		background-color: #fff;
 		display: flex;
-		height: 56px;
+		height: 57px;
 		z-index: 1;
 	}
 	.devolo_logo {
@@ -174,9 +180,15 @@ table.md-table th.md-column.md-active {
 	.brand {
 		height: 48px;
 		&:before {
-			background: transparent url("/app/assets/devolo_header_sm.svg") no-repeat scroll -23px 1px;
+			background: transparent url("/app/assets/devolo_header_sm.svg") no-repeat scroll 0 1px;
 		    height: 46px;
 		    width: 25px;
+		    -moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: 'FlipH';
 		}
 		.logo_wrapper {
 		    height: 41px;	   
@@ -194,10 +206,17 @@ table.md-table th.md-column.md-active {
 @media screen and (max-width: 599px) {
 	.brand {
 		height: 48px;
+
 		&:before {
-			background: transparent url("/app/assets/devolo_header_sm.svg") no-repeat scroll -23px 1px;
+			background: transparent url("/app/assets/devolo_header_sm.svg") no-repeat scroll 0 1px;
 		    height: 46px;
 		    width: 25px;
+		    -moz-transform: scaleX(-1);
+	        -o-transform: scaleX(-1);
+	        -webkit-transform: scaleX(-1);
+	        transform: scaleX(-1);
+	        filter: FlipH;
+	        -ms-filter: 'FlipH';
 		}
 		.logo_wrapper {
 		    height: 41px;	   
