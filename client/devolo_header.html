@@ -1,5 +1,7 @@
 <md-toolbar class="page-header" ng-hide="vm.menu.hideToolbar">
+<div class="brand_bg" md-whiteframe="3"></div>
   <div class="md-toolbar-tools">
+
     <md-button id="main" ng-if="!vm.menu.hideBurger" class="md-icon-button" ng-click="toggleOpen()" aria-label="Settings">
       <md-icon>menu</md-icon>
     </md-button>
@@ -10,80 +12,79 @@
     </h2>
     <span flex></span>
     <div class="brand">
-    <div class="logo_wrapper" md-whiteframe="3">
-    <h2><a href="/#/">
-      <img src="/app/assets/devolo_logo_grau.svg"  width="200" height="90px" 
-       />
-    </a></h2>
-      <md-menu>
-        <md-button aria-label="Open Apps Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-          <md-icon class="more_right">more_horiz</md-icon>
+      <div class="logo_wrapper" md-whiteframe="3">
+        <h2><a href="/#/">
+          <img src="/app/assets/devolo_logo_grau.svg" class="devolo_logo devolo_logo_lg"/>
+          <img src="/app/assets/devolo_logo_grau_sm.svg" hide-gt-sm class="devolo_logo devolo_logo_sm"/>
+        </a></h2>
+        <md-menu>
+          <md-button aria-label="Open Apps Menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon class="more_right">more_horiz</md-icon>
+          </md-button>
+          <md-menu-content width="4" >
+            <md-menu-item ng-repeat="item in vm.menu.main">
+              <md-button href='{{item.link}}'>
+                <md-icon md-menu-align-target>{{ item.icon }}</md-icon>
+                {{ item.title }}
+              </md-button>
+            </md-menu-item>
+            <!-- -->
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button ng-href="/#/me" >
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">face</md-icon>
+                <span translate>Account</span>
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button target="_blank" ng-href="http://docs.cucumberwifi.io" >
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">account_balance</md-icon>
+                <span translate>Documentation</span>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button target="_blank" ng-href="https://discuss.cucumberwifi.io/" >
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">forum</md-icon>
+                <span translate>Discussions</span>
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button href="/#/downloads" >
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">get_app</md-icon>
+                <span translate>Downloads</span>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button href="/#/apps" >
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">android</md-icon>
+                <span translate>Developer</span>
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider></md-menu-divider>
+            <md-menu-item>
+              <md-button ng-click="logout()">
+                <md-icon md-menu-align-target style="margin: auto 3px auto 0;">exit_to_app</md-icon>
+                <span translate>Logout</span>
+              </md-button>
+            </md-menu-item>
+            <!-- -->
+          </md-menu-content>
+        </md-menu>
+  <!--       
+        <md-button class="md-icon-button" aria-label="Support" ng-if="!vm.menu.Intercom">
+          <a target="_blank" href="http://discuss.cucumberwifi.io">
+            <md-icon>forum</md-icon>
+          </a>
         </md-button>
-        <md-menu-content width="4" >
-          <md-menu-item ng-repeat="item in vm.menu.main">
-            <md-button href='{{item.link}}'>
-              <md-icon md-menu-align-target>{{ item.icon }}</md-icon>
-              {{ item.title }}
-            </md-button>
-          </md-menu-item>
-          <!-- -->
-          <md-menu-divider></md-menu-divider>
-          <md-menu-item>
-            <md-button ng-href="/#/me" >
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">face</md-icon>
-              <span translate>Account</span>
-            </md-button>
-          </md-menu-item>
-          <md-menu-divider></md-menu-divider>
-          <md-menu-item>
-            <md-button target="_blank" ng-href="http://docs.cucumberwifi.io" >
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">account_balance</md-icon>
-              <span translate>Documentation</span>
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button target="_blank" ng-href="https://discuss.cucumberwifi.io/" >
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">forum</md-icon>
-              <span translate>Discussions</span>
-            </md-button>
-          </md-menu-item>
-          <md-menu-divider></md-menu-divider>
-          <md-menu-item>
-            <md-button href="/#/downloads" >
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">get_app</md-icon>
-              <span translate>Downloads</span>
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button href="/#/apps" >
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">android</md-icon>
-              <span translate>Developer</span>
-            </md-button>
-          </md-menu-item>
-          <md-menu-divider></md-menu-divider>
-          <md-menu-item>
-            <md-button ng-click="logout()">
-              <md-icon md-menu-align-target style="margin: auto 3px auto 0;">exit_to_app</md-icon>
-              <span translate>Logout</span>
-            </md-button>
-          </md-menu-item>
-          <!-- -->
-        </md-menu-content>
-      </md-menu>
-
-<!--       
-      <md-button class="md-icon-button" aria-label="Support" ng-if="!vm.menu.Intercom">
-        <a target="_blank" href="http://discuss.cucumberwifi.io">
-          <md-icon>forum</md-icon>
-        </a>
-      </md-button>
-      <md-button class="md-icon-button" aria-label="Support" id="intercom" ng-if="vm.menu.Intercom">
-        <md-icon>chat</md-icon>
-      </md-button>
- -->
+        <md-button class="md-icon-button" aria-label="Support" id="intercom" ng-if="vm.menu.Intercom">
+          <md-icon>chat</md-icon>
+        </md-button>
+   -->
       </div><!-- end logo_wrapper-->
     </div><!--end brand-->
-<!--     <md-button id="main" hide-gt-sm class="md-icon-button" ng-click="toggle('right')" aria-label="Settings">
+<!-- <md-button id="main" hide-gt-sm class="md-icon-button" ng-click="toggle('right')" aria-label="Settings">
       <md-icon>apps</md-icon>
     </md-button> -->
   </div>

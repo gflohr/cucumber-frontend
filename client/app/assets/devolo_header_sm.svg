@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="400" viewBox="0 0 48 400" 
+	class="header_cornenrs" 
+	style="-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: 'FlipH';">
+
+
+	<svg width="41" height="64" viewBox="0 0 41 64" id="header-curve-tablet-shadow" y="0">
+		<defs>
+			<filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="dia"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0" in="shadowBlurOuter1" result="shadowMatrixOuter1"/><feMerge><feMergeNode in="shadowMatrixOuter1"/><feMergeNode in="SourceGraphic"/></feMerge>
+			</filter>
+		</defs>
+		<path d="M21.3 0H0v40h1.9s3.6 0 4.6-3.4l8.4-30.1c.8-3.7 4-4.3 5.1-4.4h1.3V0z" filter="url(#dia)" fill="#fff"/>
+	</svg>
+	<svg width="41.3" height="60" viewBox="0 0 41.3 60" id="header-curve-tablet" y="100">
+		<path d="M21.3 0H0v40h1.9s3.6 0 4.6-3.4l8.4-30.1c.8-3.7 4-4.3 5.1-4.4h1.3V0z" fill="#fff"/>
+	</svg>
+</svg>
