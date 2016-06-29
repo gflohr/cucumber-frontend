@@ -105,8 +105,11 @@ table.md-table {
 	}
 	tbody tr:nth-child(even) td {
 		background-color: #ebf4f9;
-	}
 
+	}
+	tbody.md-body > tr.md-row:not([disabled]):hover td{
+	  background-color: #eeeeee !important;
+	}
 }
 
 table.md-table th.md-column.md-active {
